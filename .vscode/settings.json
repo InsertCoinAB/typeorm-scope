@@ -1,0 +1,13 @@
+{
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.organizeImports": true
+	},
+	"eslint.validate": ["typescript"],
+	"typescript.preferences.importModuleSpecifier": "relative",
+	"typescript.tsdk": "node_modules/typescript/lib",
+	"workbench.colorCustomizations": {
+		"statusBar.background": "#3bdbd0",
+		"statusBar.foreground": "#252525"
+	}
+}

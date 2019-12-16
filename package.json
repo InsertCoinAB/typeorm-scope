@@ -1,0 +1,78 @@
+{
+	"name": "typeorm-scope",
+	"version": "0.0.1",
+	"license": "MIT",
+	"description": "TypeORM extension which adds scope to entities.",
+	"scripts": {
+		"dev": "nodemon -w 'src/**/*' --ignore 'src/**/*.spec.ts' -e ts -x 'yarn build'",
+		"build": "yarn build:types && yarn build:js",
+		"build:types": "tsc --build tsconfig-ci.json",
+		"build:js": "babel src --out-dir dist --extensions '.ts' --source-maps inline --ignore 'test/**'",
+		"test": "jest --runInBand",
+		"test:types": "tsc --noEmit",
+		"test:lint": "eslint 'src/**/*.ts'",
+		"test:prettier": "prettier --check 'src/**/*'"
+	},
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/InsertCoinAB/typeorm-scope"
+	},
+	"keywords": [
+		"typeorm",
+		"scope"
+	],
+	"author": {
+		"name": "Insert Coin",
+		"email": "info@insertcoin.se"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@babel/cli": "^7.7.5",
+		"@babel/core": "^7.7.5",
+		"@babel/node": "^7.7.4",
+		"@babel/plugin-proposal-class-properties": "^7.7.4",
+		"@babel/plugin-proposal-decorators": "^7.7.4",
+		"@babel/plugin-proposal-object-rest-spread": "^7.7.4",
+		"@babel/plugin-proposal-optional-chaining": "^7.7.5",
+		"@babel/preset-env": "^7.7.6",
+		"@babel/preset-typescript": "^7.7.4",
+		"@types/jest": "^24.0.23",
+		"@types/node": "^12.12.18",
+		"@typescript-eslint/eslint-plugin": "^2.10.0",
+		"@typescript-eslint/parser": "^2.10.0",
+		"babel-jest": "^24.9.0",
+		"babel-plugin-transform-typescript-metadata": "^0.2.2",
+		"core-js": "^3.4.8",
+		"eslint": "^6.7.2",
+		"eslint-config-prettier": "^6.7.0",
+		"eslint-plugin-import": "^2.19.1",
+		"eslint-plugin-jest": "^23.1.1",
+		"eslint-plugin-promise": "^4.2.1",
+		"eslint-plugin-unicorn": "^14.0.1",
+		"jest": "^24.9.0",
+		"nodemon": "^2.0.1",
+		"pg": "^7.14.0",
+		"prettier": "^1.19.1",
+		"typeorm": "^0.2.20",
+		"typescript": "^3.7.3"
+	},
+	"peerDependencies": {
+		"typeorm": "^0.2.20"
+	},
+	"jest": {
+		"moduleFileExtensions": [
+			"js",
+			"json",
+			"ts"
+		],
+		"watchPathIgnorePatterns": [
+			"<rootDir>/dist/",
+			"<rootDir>/node_modules/"
+		],
+		"coveragePathIgnorePatterns": [
+			"/node_modules/"
+		]
+	}
+}

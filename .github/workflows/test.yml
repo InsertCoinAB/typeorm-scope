@@ -1,0 +1,33 @@
+name: Test
+on: [push, pull_request]
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Cache node modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: ${{ runner.os }}-node-
+
+      - uses: actions/setup-node@v1
+
+      - name: Install
+        run: yarn install
+
+      - name: Test Types
+        run: yarn test:types
+
+      - name: Test Lint
+        run: yarn test:lint
+
+      - name: Test Prettier
+        run: yarn test:prettier
+
+      - name: Build
+        run: yarn build
