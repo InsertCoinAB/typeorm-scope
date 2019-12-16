@@ -26,7 +26,8 @@
 	"author": {
 		"name": "Insert Coin",
 		"email": "info@insertcoin.se"
-	},
+  },
+  "files": ["dist/**", "package.json", "LICENSE", "README.md"],
 	"dependencies": {},
 	"devDependencies": {
 		"@babel/cli": "^7.7.5",
