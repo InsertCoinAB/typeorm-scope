@@ -1,6 +1,6 @@
 {
 	"name": "typeorm-scope",
-	"version": "0.0.1",
+	"version": "0.1.0",
 	"license": "MIT",
 	"description": "TypeORM extension which adds scope to entities.",
 	"scripts": {
