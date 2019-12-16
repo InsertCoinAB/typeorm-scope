@@ -34,7 +34,7 @@ To define a scope for an entity you need to add the `@Scope([...scopes])` decora
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm"
 import { Scope } from "typeorm-scope"
 
-@Scopes<User>([(qb, alias) => qb.andWhere(`${alias}.deletedAt IS NULL`)])
+@Scope<User>([(qb, alias) => qb.andWhere(`${alias}.deletedAt IS NULL`)])
 @Entity()
 export class User {
 	@PrimaryGeneratedColumn()
