@@ -24,7 +24,7 @@ class SelectQB<Entity extends ObjectLiteral> extends SelectQueryBuilder<Entity> 
 
 export const patchSelectQueryBuilder = () => {
 	SelectQueryBuilder.prototype[GET_QUERY_COPY] = SelectQueryBuilder.prototype.getQuery
-	Object.getOwnPropertyNames(SelectQB.prototype).forEach((propertie) => {
-		Object.defineProperty(SelectQueryBuilder.prototype, propertie, Object.getOwnPropertyDescriptor(SelectQB.prototype, propertie) as PropertyDescriptor)
+	Object.getOwnPropertyNames(SelectQB.prototype).forEach((property) => {
+		Object.defineProperty(SelectQueryBuilder.prototype, property, Object.getOwnPropertyDescriptor(SelectQB.prototype, property) as PropertyDescriptor)
 	})
 }
