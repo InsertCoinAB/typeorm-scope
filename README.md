@@ -2,7 +2,7 @@
 
 ![](https://github.com/InsertCoinAB/typeorm-scope/workflows/Test/badge.svg) ![](https://codeclimate.com/github/InsertCoinAB/typeorm-scope/badges/coverage.svg) ![](https://codeclimate.com/github/InsertCoinAB/typeorm-scope/badges/gpa.svg) ![](https://img.shields.io/npm/v/typeorm-scope.svg)
 
-A query scope decorator for [TypeORM](https://github.com/typeorm/typeorm) entities. It patches TypeORM's SelectQueryBuilder so that it includes the scopes you define. This package was created to enable a simpler way of implementing a SoftDelete before an official solusion is implemented.
+A query scope decorator for [TypeORM](https://github.com/typeorm/typeorm) entities. It patches TypeORM's SelectQueryBuilder so that it includes the scopes you define. This package was created to enable a simpler way of implementing a SoftDelete before an official solution is implemented.
 
 ## Installation
 
