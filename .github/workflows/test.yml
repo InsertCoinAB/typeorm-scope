@@ -5,6 +5,15 @@ jobs:
   test:
     name: Test
     runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:11-alpine
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: password
+          POSTGRES_DB: typeorm-scope
+        ports:
+          - 5432:5432
     steps:
       - uses: actions/checkout@v1
 
