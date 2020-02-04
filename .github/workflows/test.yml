@@ -29,5 +29,8 @@ jobs:
       - name: Test Prettier
         run: yarn test:prettier
 
+      - name: Test Coverage
+        run: yarn test --coverage
+
       - name: Build
         run: yarn build
