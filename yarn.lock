@@ -1495,10 +1495,10 @@ babel-plugin-jest-hoist@^25.1.0:
   dependencies:
     "@types/babel__traverse" "^7.0.6"
 
-babel-plugin-transform-typescript-metadata@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-typescript-metadata/-/babel-plugin-transform-typescript-metadata-0.2.2.tgz#fc44611187409ed9d5cb372ca2f85939a359cada"
-  integrity sha512-wWRw1p3IDNZN8l3UOLgeScq9Nhh4lvxT7ZOvUzYi5sMw8lUWW+KdRlnBeQKehHAsgDs5TR6PvMJmsQ6e6NmKCg==
+babel-plugin-transform-typescript-metadata@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-typescript-metadata/-/babel-plugin-transform-typescript-metadata-0.3.0.tgz#70093ea8611baf985293fb3ec704d1b7db737ad9"
+  integrity sha512-ASYrM+bxtpfgZKsAOqQfjmLlekIDigRnNCfQBDOOdaqL18hLhZIsbdiHsuaNDTkljlqnbV/DlufaWY55jC2PBg==
   dependencies:
     "@babel/helper-plugin-utils" "^7.0.0"
 
@@ -4985,11 +4985,6 @@ regenerate@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.4.0.tgz#4a856ec4b56e4077c557589cae85e7a4c8869a11"
   integrity sha512-1G6jJVDWrt0rK99kBjvEtziZNCICAuvIPkSiUFIQxVP06RCVpq3dmDo2oi6ABpYaDYaTRr67BEhL8r1wgEZZKg==
-
-regenerator-runtime@^0.13.4:
-  version "0.13.4"
-  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.13.4.tgz#e96bf612a3362d12bb69f7e8f74ffeab25c7ac91"
-  integrity sha512-plpwicqEzfEyTQohIKktWigcLzmNStMGwbOUbykx51/29Z3JOGYldaaNGK7ngNXV+UcoqvIMmloZ48Sr74sd+g==
 
 regenerator-runtime@^0.13.4:
   version "0.13.4"
