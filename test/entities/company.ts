@@ -11,10 +11,7 @@ export class Company extends BaseEntity {
 	@Column()
 	name: string
 
-	@OneToMany(
-		() => User,
-		(user) => user.company,
-	)
+	@OneToMany(() => User, (user) => user.company)
 	users?: User[]
 
 	@Column({ nullable: true })

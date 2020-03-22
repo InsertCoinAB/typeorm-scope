@@ -64,11 +64,7 @@ describe("query using query builder", () => {
 					.select("company")
 					.from(Company, "company")
 					.where((qb) => {
-						const subQuery = qb
-							.subQuery()
-							.from(User, "user")
-							.select("user.companyId")
-							.getQuery()
+						const subQuery = qb.subQuery().from(User, "user").select("user.companyId").getQuery()
 						return "company.id IN " + subQuery
 					})
 					.getMany()
