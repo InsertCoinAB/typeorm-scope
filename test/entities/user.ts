@@ -13,10 +13,7 @@ export class User extends BaseEntity {
 
 	@Column({ nullable: false, update: false })
 	readonly companyId: string
-	@ManyToOne(
-		() => Company,
-		(company) => company.users,
-	)
+	@ManyToOne(() => Company, (company) => company.users)
 	company: Company
 
 	@Column({ nullable: true })

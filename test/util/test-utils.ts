@@ -195,12 +195,7 @@ export function setupTestingConnections(options?: TestingOptions): ConnectionOpt
 			if (options && options.__dirname) newOptions.entities = [options.__dirname + "/entity/*{.js,.ts}"]
 			if (options && options.__dirname) newOptions.migrations = [options.__dirname + "/migration/*{.js,.ts}"]
 			if (options && options.namingStrategy) newOptions.namingStrategy = options.namingStrategy
-			newOptions.entityPrefix = `${Math.random()
-				.toString(36)
-				.slice(2, 15) +
-				Math.random()
-					.toString(36)
-					.slice(2, 15)}_`
+			newOptions.entityPrefix = `${Math.random().toString(36).slice(2, 15) + Math.random().toString(36).slice(2, 15)}_`
 			return newOptions
 		})
 }

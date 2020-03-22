@@ -2,7 +2,7 @@ import { Connection, getMetadataArgsStorage, ObjectType } from "typeorm"
 import { ScopedTableMetadata, ScopeQB } from "./table-metadata"
 
 export function Scope<Entity>(scopes: Array<ScopeQB<Entity>>, enabled = true): Function {
-	return function(target: Function) {
+	return function (target: Function) {
 		const table = getMetadataArgsStorage().tables.find((table) => table.target === target) as ScopedTableMetadata<Entity> | undefined
 		if (table) {
 			table.scopes = scopes
