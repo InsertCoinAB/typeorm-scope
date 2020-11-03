@@ -40,5 +40,7 @@ module.exports = {
 		"no-underscore-dangle": "off",
 		semi: [2, "never"],
 		"unicorn/no-for-loop": "off",
+		"@typescript-eslint/ban-types": "off",
+		"@typescript-eslint/explicit-module-boundary-types": "off"
 	},
 }
