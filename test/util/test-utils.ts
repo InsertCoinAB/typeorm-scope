@@ -2,7 +2,7 @@
  * Adapted from TypeORM tests
  */
 
-import { Connection, ConnectionOptions, createConnections, DatabaseType, EntitySchema, NamingStrategyInterface, PromiseUtils } from "typeorm"
+import { Connection, ConnectionOptions, createConnections, DatabaseType, EntitySchema, NamingStrategyInterface } from "typeorm"
 import { PostgresDriver } from "typeorm/driver/postgres/PostgresDriver"
 import { SqlServerDriver } from "typeorm/driver/sqlserver/SqlServerDriver"
 
@@ -215,7 +215,9 @@ export async function createTestingConnections(options?: TestingOptions): Promis
 			})
 
 			const queryRunner = connection.createQueryRunner()
-			await PromiseUtils.runInSequence(databases, (database) => queryRunner.createDatabase(database, true))
+			for (const database of databases) {
+				await queryRunner.createDatabase(database, true)
+			}
 
 			// create new schemas
 			if (connection.driver instanceof PostgresDriver || connection.driver instanceof SqlServerDriver) {
@@ -230,7 +232,9 @@ export async function createTestingConnections(options?: TestingOptions): Promis
 				const schema = connection.driver.options.schema
 				if (schema && schemaPaths.includes(schema)) schemaPaths.push(schema)
 
-				await PromiseUtils.runInSequence(schemaPaths, (schemaPath) => queryRunner.createSchema(schemaPath, true))
+				for (const schemaPath of schemaPaths) {
+					await queryRunner.createSchema(schemaPath, true)
+				}
 			}
 
 			await queryRunner.release()
