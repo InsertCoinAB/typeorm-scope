@@ -15,16 +15,16 @@ jobs:
         ports:
           - 5432:5432
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
 
       - name: Cache node modules
-        uses: actions/cache@v1
+        uses: actions/cache@v2
         with:
           path: node_modules
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: ${{ runner.os }}-node-
 
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
 
       - name: Install
         run: yarn install
