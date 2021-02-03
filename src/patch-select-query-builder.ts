@@ -10,21 +10,21 @@ class SelectQB<Entity extends ObjectLiteral> extends SelectQueryBuilder<Entity> 
 	}
 
 	protected ___patchScopes___(): void {
-		this.expressionMap.aliases.forEach((table) => {
-			if (!table || !table.hasMetadata) return
+		for (const table of this.expressionMap.aliases) {
+			if (!table || !table.hasMetadata) continue
 			const metadata = table.metadata.tableMetadataArgs as ScopedTableMetadata<Entity>
 			if (metadata.scopes && metadata.scopesEnabled) {
-				metadata.scopes.forEach((scope) => scope(this, table.name))
+				for (const scope of metadata.scopes) scope(this, table.name)
 			} else if (metadata.scopesEnabled === false) {
 				metadata.scopesEnabled = true
 			}
-		})
+		}
 	}
 }
 
 export const patchSelectQueryBuilder = () => {
 	SelectQueryBuilder.prototype[GET_QUERY_COPY] = SelectQueryBuilder.prototype.getQuery
-	Object.getOwnPropertyNames(SelectQB.prototype).forEach((property) => {
+	for (const property of Object.getOwnPropertyNames(SelectQB.prototype)) {
 		Object.defineProperty(SelectQueryBuilder.prototype, property, Object.getOwnPropertyDescriptor(SelectQB.prototype, property) as PropertyDescriptor)
-	})
+	}
 }
