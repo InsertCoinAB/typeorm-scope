@@ -4,6 +4,7 @@ on: pull_request
 jobs:
   conform:
     runs-on: ubuntu-latest
+    if: github.actor != 'dependabot[bot]' && github.actor != 'dependabot-preview[bot]'
     steps:
       - uses: actions/checkout@v2
         with:
