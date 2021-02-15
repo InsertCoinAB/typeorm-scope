@@ -1,0 +1,16 @@
+name: Conform
+on: pull_request
+
+jobs:
+  conform:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+
+      - name: Conform Action
+        uses: docker://autonomy/conform:v0.1.0-alpha.20
+        with:
+          args: enforce --commit-ref refs/remotes/origin/main
