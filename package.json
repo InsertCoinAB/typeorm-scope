@@ -52,7 +52,7 @@
 		"babel-plugin-transform-typescript-metadata": "^0.3.0",
 		"core-js": "^3.4.8",
 		"eslint": "^7.12.1",
-		"eslint-config-prettier": "^7.0.0",
+		"eslint-config-prettier": "^8.1.0",
 		"eslint-plugin-import": "^2.19.1",
 		"eslint-plugin-jest": "^24.0.0",
 		"eslint-plugin-promise": "^4.2.1",
