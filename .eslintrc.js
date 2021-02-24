@@ -1,14 +1,6 @@
 module.exports = {
 	plugins: ["@typescript-eslint", "jest", "promise", "unicorn"],
-	extends: [
-		"plugin:@typescript-eslint/recommended",
-		"plugin:jest/recommended",
-		"plugin:promise/recommended",
-		"plugin:unicorn/recommended",
-		"prettier",
-		"prettier/react",
-		"prettier/@typescript-eslint",
-	],
+	extends: ["plugin:@typescript-eslint/recommended", "plugin:jest/recommended", "plugin:promise/recommended", "plugin:unicorn/recommended", "prettier"],
 	env: {
 		node: true,
 		browser: true,
@@ -41,6 +33,6 @@ module.exports = {
 		semi: [2, "never"],
 		"unicorn/no-for-loop": "off",
 		"@typescript-eslint/ban-types": "off",
-		"@typescript-eslint/explicit-module-boundary-types": "off"
+		"@typescript-eslint/explicit-module-boundary-types": "off",
 	},
 }
