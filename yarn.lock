@@ -2679,9 +2679,9 @@ eslint-plugin-promise@^5.0.0:
   integrity sha512-NGmI6BH5L12pl7ScQHbg7tvtk4wPxxj8yPHH47NvSmMtFneC077PSeY3huFj06ZWZvtbfxSPt3RuOQD5XcR4ng==
 
 eslint-plugin-unicorn@^33.0.0:
-  version "33.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-33.0.0.tgz#4b00a9e6b17954ff50f4e2aa5f10a5e2de56ee5a"
-  integrity sha512-aPoAsI41ShB1H8EHU2rPb0iBymp1fUUpC/J8fIwofXz9ENH9nc4JU2b5wA9YKdrIeMvsSnSRg3pfzRr69Z9+Dw==
+  version "33.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-unicorn/-/eslint-plugin-unicorn-33.0.1.tgz#15c7d210aad77466acb1e899b06b070099e029ce"
+  integrity sha512-VxX/L/9DUEyB3D0v00185LrgsB5/fBwkgA4IC7ehHRu5hFSgA6VecmdpFybhsr4GQ/Y1iyXMHf6q+JKvcR2MwA==
   dependencies:
     ci-info "^3.1.1"
     clean-regexp "^1.0.0"
